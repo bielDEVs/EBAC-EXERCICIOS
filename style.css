@@ -132,7 +132,8 @@ section p {
 
 /* Media Queries para dispositivos móveis */
 @media (max-width: 640px) {
-    header .container, section .container {
+    header .container,
+    section .container {
         flex-direction: column;
         align-items: flex-start;
     }
@@ -148,14 +149,15 @@ section p {
     }
 
     .produtos-grid {
-        flex-direction: column;
+        flex-direction: column; /* Alteração necessária para exibir os produtos em coluna */
     }
 
     .produto {
-        flex: 1 1 100%;
+        flex: 1 1 100%; /* Alteração necessária para que cada produto ocupe toda a largura disponível */
         margin-bottom: 16px;
     }
 }
+
 
 @media (max-width: 1023px) {
     header .container, section .container {
