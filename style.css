@@ -149,39 +149,25 @@ section p {
     }
 
     .produtos-grid {
-        flex-direction: column; /* Alteração necessária para exibir os produtos em coluna */
+        flex-direction: column; /* Exibir produtos em coluna */
     }
 
     .produto {
-        flex: 1 1 100%; /* Alteração necessária para que cada produto ocupe toda a largura disponível */
+        flex: 1 1 100%; /* Cada produto ocupa toda a largura */
         margin-bottom: 16px;
     }
 }
 
-
-@media (max-width: 1023px) {
-    header .container, section .container {
-        flex-direction: column;
-        align-items: flex-start;
-    }
-
-    header nav li {
-        margin-left: 0;
-        margin-bottom: 8px;
-    }
-
-    .store-front {
-        margin-right: 0;
-        margin-bottom: 16px;
-    }
-
+/* Media Queries para tablets */
+@media (min-width: 641px) and (max-width: 1023px) {
     .produtos-grid {
         flex-direction: row;
-        justify-content: space-between;
+        flex-wrap: wrap;
+        justify-content: space-between; /* Distribuir produtos em duas colunas */
     }
 
     .produto {
-        flex: 1 1 calc(50% - 8px); /* 50% menos o espaço entre os produtos */
+        flex: 1 1 calc(50% - 8px); /* Cada produto ocupa metade da largura disponível com espaçamento entre eles */
         margin-bottom: 16px;
     }
 }
